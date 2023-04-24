@@ -17,16 +17,51 @@
       <img src="leaf.jpg" alt="leaf" />
     </div>
     <div class="right-cnt">
+      <div class="right-top"></div>
       <div class="top-quote">
-        This is not a real online service! You know you need something like this in
-        your life to help you realize your deepest dreams. <br />Sign up
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams. <br />Sign up
         <em>now</em> to get started. <br /><br />
         You <em>know</em> you want to.
       </div>
-        
-      <form action="post">
 
-      </form>
+      <div class="form-cnt">
+        <form action="" id="myForm" method="get">
+          <div>Let's do this!</div>
+          <div class="ul-cnt">
+            <ul>
+              <li>
+                <label for="name">FIRST NAME</label
+                ><input type="text" id="name" required/>
+              </li>
+              <li>
+                <label for="lname">LAST NAME</label
+                ><input type="text" id="lname" required/>
+              </li>
+              <li>
+                <label for="email">EMAIL</label
+                ><input type="email" id="email" required/>
+              </li>
+              <li>
+                <label for="phone">PHONE NUMBER</label
+                ><input type="tel" id="phone" required/>
+              </li>
+              <li>
+                <label for="pwd">PASSWORD</label
+                ><input type="password" id="pwd" required/>
+              </li>
+              <li>
+                <label for="pwd-confirm">CONFIRM PASSWORD</label
+                ><input type="password" id="pwd-confirm" required/>
+              </li>
+                 <input type="submit" id="submit-form" class="hidden" />
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="footer">
+        <button class='submit-btn'><label for="submit-form" tabindex="0">Create account</label></button>
+      </div>
     </div>
   </body>
 </html>
