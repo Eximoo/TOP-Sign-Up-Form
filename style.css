@@ -2,8 +2,54 @@
   font-family: Norse;
   src: url(Norse-Bold.otf);
 }
+@media (max-width: 960px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+  html {
+    height: auto;
+  }
+  .left-cnt {
+    width: 100%;
+    height: auto;
+  }
+  img {
+    max-height: 17vh;
+  }
+}
+@media (min-width: 960px) {
+  .left-cnt {
+    width: 35%;
+    position: relative;
+  }
+  .right-cnt {
+    width: 65%;
+    height: 100%;
+  }
+  .form-cnt {
+    height: 35%;
+  }
+  .top-quote {
+    height: 30%;
+    padding-right: 18%;
+  }
+  .right-top {
+    height: 5%;
+    background-color: rgba(187, 184, 184, 0.164);
+  }
+  img {
+    max-width: 100%;
+    height: 100%;
+    max-height: 100vh;
+  }
+  .logo-cnt {
+    top: 8rem;
+  }
+}
 body,
 html {
+  min-width: 320px;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -14,13 +60,12 @@ html {
 img {
   padding: 0;
   display: block;
-  max-height: 100vh;
-  max-width: 100%;
+  /* max-width: 100%; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 html {
-  background-color: black;
+  /* background-color: black; */
 }
 body {
   display: flex;
@@ -31,32 +76,28 @@ body {
 form {
   width: 100%;
 }
-.left-cnt {
+/* .left-cnt {
   width: 35%;
   position: relative;
-}
+} */
 .logo-cnt {
   display: flex;
   text-align: center;
   position: absolute;
-  top: 25%;
+  /* top: 8rem; */
   background-color: rgba(0, 0, 0, 0.349);
   width: 100%;
   padding: 8px;
   justify-content: center;
   align-items: center;
 }
-.right-top {
-  height: 5%;
-  background-color: rgba(187, 184, 184, 0.164);
-}
+
 .top-quote {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 30%;
   padding: 40px;
   /* padding-top: 18%; */
-  padding-right: 18%;
+  /* padding-right: 18%; */
   background-color: rgba(187, 184, 184, 0.164);
   font-size: 2.5vh;
   font-weight: bold;
@@ -71,16 +112,9 @@ form {
   font-size: 92px;
   color: white;
 }
-.right-cnt {
-  width: 65%;
-  height: 100%;
-}
-li {
-  list-style: none;
-}
+
 .form-cnt {
-  box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.26);
-  height: 35%;
+  box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.26);
   padding: 10px 40px;
 }
 .form-cnt > form > div {
@@ -97,8 +131,8 @@ ul {
   padding: 0;
   margin: 0;
 }
-ul.cnt{
-  display:flex;
+ul.cnt {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -106,14 +140,15 @@ input {
   appearance: none;
   border: 1px solid lightgray;
   display: block;
-  width: 250px;
+  width: 240px;
   height: 30px;
   border-radius: 4px;
   padding: 3px 6px;
 }
 li {
+  list-style: none;
   flex-basis: 40%;
-  padding: 10px 0;
+  padding: 10px 5px;
 }
 label {
   font-weight: light;
@@ -123,28 +158,38 @@ label {
   width: 30%;
   padding: 40px;
 }
-input:active,input:focus{
-  outline: 1px solid rgb(104, 142, 247);
+input[type="password"]:invalid {
+  border-color: red;
 }
-.hidden{
+input:active,
+input:focus {
+  outline: 1px solid rgb(104, 142, 247);
+  box-shadow: 1px 1px 2px 2px rgba(172, 205, 207, 0.67);
+  border-color: lightgray;
+}
+.hidden {
   position: absolute;
   visibility: hidden;
 }
-.submit-btn>label {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.submit-btn > label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: block;
   width: 100%;
+  height: 100%;
+  line-height: 50px;
   text-align: center;
   color: white;
   font-size: 16px;
   font-weight: bold;
-  height: 100%;
 }
-.submit-btn{
+.submit-btn {
+  box-shadow: 1px 1px 9px 5px rgba(158, 126, 126, 0.67);
   border: none;
-  display: flex;
+  /* display: flex; */
   width: 200px;
   height: 50px;
-  background-color: #CC5000;
+  background-color: #cc5000;
   border-radius: 1em;
+  padding: 0;
 }
