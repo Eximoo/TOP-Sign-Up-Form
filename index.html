@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sing up Form</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -31,29 +31,48 @@
           <div class="ul-cnt">
             <ul>
               <li>
-                <label for="name">FIRST NAME</label
-                ><input type="text" id="name" required />
+                <label for="name">FIRST NAME*</label>
+                <input type="text" id="name" autocomplete="name" required />
               </li>
               <li>
-                <label for="lname">LAST NAME</label
-                ><input type="text" id="lname" required />
+                <label for="lname">LAST NAME*</label>
+                <input
+                  type="text"
+                  id="lname"
+                  autocomplete="family-name"
+                  required
+                />
               </li>
               <li>
-                <label for="email">EMAIL</label
-                ><input type="email" id="email" required />
+                <label for="email">EMAIL*</label>
+                <input type="email" id="email" autocomplete="email" required />
               </li>
               <li>
-                <label for="phone">PHONE NUMBER</label
-                ><input type="tel" id="phone" required />
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" autocomplete="tel" />
               </li>
               <li>
-                <label for="pwd">PASSWORD</label
-                ><input class="first-pwd" type="password" id="pwd" required />
-                <!-- <span class="pwd-error">* Password do not match</span> -->
+                <label for="pwd">PASSWORD*</label>
+                <input
+                  id="first-pwd"
+                  type="password"
+                  id="pwd"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+                <span id="error"></span>
               </li>
               <li>
-                <label for="pwd-confirm">CONFIRM PASSWORD</label
-                ><input type="password" id="pwd-confirm" required />
+                <label for="pwd-confirm">CONFIRM PASSWORD*</label>
+                <input
+                  id="confirm-pwd"
+                  type="password"
+                  id="pwd-confirm"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
               </li>
               <input type="submit" id="submit-form" class="hidden" />
             </ul>
@@ -62,10 +81,11 @@
       </section>
       <div class="footer">
         <button class="submit-btn" tabindex="-1">
-          <label for="submit-form" tabindex="0"
-            ><span>Create account</span></label
-          >
+          <label for="submit-form" tabindex="0">
+            <span>Create account</span>
+          </label>
         </button>
+        <div id="account-already">Already have an account? <a href="">Login in</a></div>
       </div>
     </div>
   </body>
