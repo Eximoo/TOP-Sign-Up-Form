@@ -8,16 +8,17 @@ console.log(form);
 // console.log(confirmPwd.value);
 
 form.addEventListener("submit", (event) => {
-  console.log(pwd.value);
-  console.log(confirmPwd.value);
+//   console.log(pwd.value);
+//   console.log(confirmPwd.value);
   if (pwd.value !== confirmPwd.value) {
-    console.log("not same");
+    // console.log("not same");
     pwdError.textContent = "*Password do not match";
+    event.preventDefault();
   } else {
     pwdError.textContent = "";
-    console.log("same");
+    // console.log("same");
   }
-  event.preventDefault();
+  
 
   //   if (pwd.textContent !== confirmPwd.textContent) {
   //     pwdError.textContent = "Password do not match";
