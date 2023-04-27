@@ -32,7 +32,12 @@
             <ul>
               <li>
                 <label for="name">FIRST NAME*</label>
-                <input type="text" id="name" autocomplete="given-name" required />
+                <input
+                  type="text"
+                  id="name"
+                  autocomplete="given-name"
+                  required
+                />
               </li>
               <li>
                 <label for="lname">LAST NAME*</label>
@@ -60,12 +65,14 @@
                   autocomplete="new-password"
                   minlength="8"
                   required
+                  class="error"
                 />
-                <span id="error"></span>
+                <span id="error">*Password do not match</span>
               </li>
               <li>
                 <label for="pwd-confirm">CONFIRM PASSWORD*</label>
                 <input
+                  class="error"
                   id="confirm-pwd"
                   type="password"
                   id="pwd-confirm"
@@ -85,7 +92,9 @@
             <span>Create account</span>
           </label>
         </button>
-        <div id="account-already">Already have an account? <a href="">Login in</a></div>
+        <div id="account-already">
+          Already have an account? <a href="">Login in</a>
+        </div>
       </div>
     </div>
   </body>

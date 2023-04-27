@@ -162,7 +162,10 @@ label {
 /* input[type="password"]:invalid {
   border-color: red;
 } */
-
+.error {
+  border-color: red !important;
+  outline-color: red !important;
+}
 input:active,
 input:focus {
   outline: 1px solid rgb(104, 142, 247);
@@ -230,3 +233,4 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
