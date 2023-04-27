@@ -3,7 +3,7 @@ const confirmPwd = document.querySelector("#confirm-pwd");
 const pwdError = document.querySelector("#error");
 const form = document.querySelector("form");
 
-console.log(form);
+// console.log(form);
 // console.log(pwd.value);
 // console.log(confirmPwd.value);
 
